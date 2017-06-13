@@ -32,12 +32,14 @@ bool DateTime::readDateTime(string sfilename, string svar){
     datetimeMap.insert( std::make_pair(dataDateTime(year, month, date, hour, minute, second), Tambt) );
 
     // print output
+    /*
     if(ie ==0) cout<<"date, time range [ "<<endl;
     if(ie ==0 || ie==nentry-1){
       cout<<year <<" "<< month <<" "<< date << " "<< hour << " " <<minute << " "<< int(second)<<endl;
     }
     if(ie ==0) cout<<","<<endl;
     if(ie ==nentry-1) cout<<"]"<<endl;
+    */
   }
   return true;
 }
