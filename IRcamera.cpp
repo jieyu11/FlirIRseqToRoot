@@ -14,7 +14,8 @@ double IRcamera::raw_to_temperature(double val_raw){
 
   double RawAtom = para_R1 / (para_R2 * ( exp( para_B / (para_AtomTemp + 273.15) ) - para_F ) ) - para_O;
   double RawRefl = para_R1 / (para_R2 * ( exp( para_B / (para_ReflTemp + 273.15) ) - para_F ) ) - para_O;
-  double RawObj  = ( val_raw - para_Transmissivity * (1 - para_Emissivity) * RawRefl - (1 - para_Transmissivity) * RawAtom ) / ( para_Emissivity * para_Transmissivity);
+  //double RawObj  = ( val_raw - para_Transmissivity * (1 - para_Emissivity) * RawRefl - (1 - para_Transmissivity) * RawAtom ) / ( para_Emissivity * para_Transmissivity);
+  double RawObj  = ( val_raw - para_Transmissivity * (1 - para_Emissivity) * RawAtom - (1 - para_Transmissivity) * RawRefl ) / ( para_Emissivity * para_Transmissivity);
   double TinC = para_B / log ( para_R1 / ( para_R2*( RawObj + para_O) ) + para_F) - 273.15;
 
   return TinC;
