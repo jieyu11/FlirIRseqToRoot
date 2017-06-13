@@ -8,7 +8,9 @@
 # 2) source binarytorawtext.sh:     convert binary files (per frame) into text files (raw value)
 # 3) source texttoroot.sh:          convert text files into root format, meanwhile calculate temperature from raw data values
 #
-###############################################################
+
+------------------------------------------------------
+
 #Section 1. ExifTool installation and basic information
 #
 #  ExifTool to download:
@@ -23,7 +25,9 @@
 #  After this step, one can run the code to produce .root files.
 #  Following sections provide more details on how it is done.
 #
-###############################################################
+
+------------------------------------------------------
+
 #Section 2. ExifTool basic commands
 #
 #  To get the meta-data information directly from raw data produced by FLIR software (*.seq), one can use ExifTool in command lines, for example:
@@ -58,7 +62,9 @@
 #  Here, it extracts the first image in Rec_test.seq into a_example.dat.
 #  
 #  
-###############################################################
+
+------------------------------------------------------
+
 #Section 3: Convert Raw Binary Data to Text Files
 #  With exiftool, one can convert image in *.seq to *.pgm file, which contains the A/D counts (raw values), using:
 #  
@@ -84,7 +90,9 @@
 #  which matches the calculation using FLIR software.
 #  
 #  
-###############################################################
+
+------------------------------------------------------
+
 #Section 4: Splitting Images in Sequence File
 #  Splitting images in *.seq files requires the information of actual image time. 
 #  One can first check that the information of the time is there in the .seq using:
